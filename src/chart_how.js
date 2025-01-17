@@ -7,8 +7,7 @@ export default async function drawHowChart() {
   const height = Math.min(width, 800);
   const radius = Math.min(width, height) / 2;
 
-  const csvFile = new URL('./A1_how_dataset.csv', import.meta.url);
-  const data = await d3.csv(csvFile);
+  const data = await d3.csv("https://lvingonzales.github.io/A1_how_dataset.csv");
   console.log(data);
 
   const arc = d3
