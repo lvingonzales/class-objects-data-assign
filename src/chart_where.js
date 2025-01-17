@@ -9,7 +9,8 @@ export default async function drawWhereChart() {
   const height = Math.min(width, 800);
   const radius = Math.min(width, height) / 2;
 
-  const data = await d3.csv("../A1_where_dataset.csv");
+  const csvFile = new URL("./A1_where_dataset.csv", import.meta.url);
+  const data = await d3.csv(csvFile);
   console.log(data);
 
   const arc = d3
@@ -92,7 +93,7 @@ export default async function drawWhereChart() {
       });
     })
     .on("mouseout", function (event) {
-      showDefaultInfo(event)
+      showDefaultInfo(event);
       let paths = Array.from(svg.node().querySelectorAll("path"));
       paths.forEach((path) => {
         if (path !== event.target) {
