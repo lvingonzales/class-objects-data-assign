@@ -6,10 +6,13 @@ const howInfo = document.querySelector(".how > .description > .info");
 export default async function drawHowChart() {
   const height = Math.min(width, 800);
   const radius = Math.min(width, height) / 2;
+  let data;
 
-  const data = await d3.csv("./A1_how_dataset.csv");
-  // loader for deployed version
-  //const data = await d3.csv("https://lvingonzales.github.io/A1_how_dataset.csv");
+  try {
+      data = await d3.csv("./A1_how_dataset.csv");
+    } catch (error) {
+      data = await d3.csv("https://lvingonzales.github.io/A1_how_dataset.csv");
+    }
   console.log(data);
 
   const arc = d3
