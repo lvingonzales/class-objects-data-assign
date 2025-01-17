@@ -6,3 +6,36 @@ body {
     font-family: Abeezee;
     color: #ffffff;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: scroll;
+}
+
+.section {
+    display: flex;
+}
+
+.section.intro {
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-heading{
+    font-size: 1.5rem;
+    margin-top: 0px;
+}
+
+.section.intro > .info{
+    text-align: center;
+}
+
+.heading {
+    margin-bottom: 0px;
+    font-size: 6rem;
+}
