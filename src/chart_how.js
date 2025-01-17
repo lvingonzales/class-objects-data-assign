@@ -1,15 +1,13 @@
 import * as d3 from "d3";
 const width = 500;
-const whereSubHead = document.querySelector(
-  ".where > .description > .sub-heading",
-);
-const whereInfo = document.querySelector(".where > .description > .info");
+const howSubHead = document.querySelector(".how > .description > .sub-heading");
+const howInfo = document.querySelector(".how > .description > .info");
 
-export default async function drawWhereChart() {
+export default async function drawHowChart() {
   const height = Math.min(width, 800);
   const radius = Math.min(width, height) / 2;
 
-  const data = await d3.csv("../A1_where_dataset.csv");
+  const data = await d3.csv("../A1_how_dataset.csv");
   console.log(data);
 
   const arc = d3
@@ -25,7 +23,7 @@ export default async function drawWhereChart() {
 
   const color = d3
     .scaleOrdinal()
-    .domain(data.map((d) => d.Manuf))
+    .domain(data.map((d) => d.How))
     .range(
       d3
         .quantize((t) => d3.interpolateSpectral(t * 0.8 + 0.1), data.length)
@@ -49,12 +47,12 @@ export default async function drawWhereChart() {
     .data(pie(data))
     .join("path")
     .attr("class", "highlight")
-    .attr("fill", (d) => color(d.data.Manuf))
+    .attr("fill", (d) => color(d.data.How))
     .attr("d", arc)
-    .attr("name", (d) => d.data.Name)
+    .attr("how", (d) => d.data.How)
     .attr("desc", (d) => d.data.Desc)
     .append("title")
-    .text((d) => `${d.data.Manuf}: ${d.data.Total.toLocaleString()}`);
+    .text((d) => `${d.data.How}: ${d.data.Total.toLocaleString()}`);
 
   svg
     .append("g")
@@ -68,7 +66,7 @@ export default async function drawWhereChart() {
         .append("tspan")
         .attr("y", "-0.2em")
         .attr("font-weight", "bold")
-        .text((d) => d.data.Manuf),
+        .text((d) => d.data.How),
     )
     .call((text) =>
       text
@@ -92,7 +90,7 @@ export default async function drawWhereChart() {
       });
     })
     .on("mouseout", function (event) {
-      showDefaultInfo(event)
+      showDefaultInfo(event);
       let paths = Array.from(svg.node().querySelectorAll("path"));
       paths.forEach((path) => {
         if (path !== event.target) {
@@ -104,11 +102,11 @@ export default async function drawWhereChart() {
 }
 
 function showInfo(event) {
-  whereSubHead.textContent = `Items made in ${event.target.getAttribute("name")}:`;
-  whereInfo.textContent = event.target.getAttribute("desc");
+  howSubHead.textContent = `Items that were ${event.target.getAttribute("how")}:`;
+  howInfo.textContent = event.target.getAttribute("desc");
 }
 
 function showDefaultInfo(event) {
-  whereSubHead.textContent = ``;
-  whereInfo.textContent = `This chart shows a total of country from which each object originates, hover over a category to see some observations of the data.`;
+  howSubHead.textContent = ``;
+  howInfo.textContent = `This chart shows a total of the method by which each object was obtained, hover over a category to see some observations of the data.`;
 }

@@ -6,3 +6,116 @@ body {
     font-family: Abeezee;
     color: #ffffff;
 }
+
+footer {
+    height: 2rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: scroll;
+    gap: 5rem;
+}
+
+.section,
+.sub-section {
+    display: flex;
+}
+
+.section.intro,
+.section.more {
+    flex-direction: column;
+    align-items: center;
+}
+
+.section.intro > .heading {
+    margin-top: 2rem;
+}
+
+.sub-heading{
+    font-size: 2rem;
+    margin-top: 0px;
+}
+
+.section.intro > .info{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: justify;
+}
+
+.heading {
+    margin-bottom: 0px;
+    font-size: 6rem;
+}
+
+.description {
+    padding-left: 1rem;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
+.info {
+    margin-top: 0px;
+    font-size: 1.5rem;
+}
+
+.chart {
+    flex: 1.5 1 0;
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+}
+
+.description>.heading {
+    margin-top: 0px;
+}
+
+.highlight:hover {
+    cursor: pointer;
+    outline: none;
+    stroke: #FFFFF0;
+    stroke-width: 5px;
+    box-shadow: 50px 50px 50px #000000;
+    transition: all 0.5s ease;
+}
+
+.inactive {
+    fill: darkgray;
+    transition: all 0.5s ease;
+    box-shadow: none;
+}
+
+path {
+    transition: all 0.8s ease;
+}
+
+tspan {
+    pointer-events: none;
+}
+
+.sub-section{
+    flex: 1 1 0;
+    width: 100%;
+    gap: 2rem;
+}
+
+.sub-section > .sub-heading {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+}
+
+.sub-section.info {
+    flex-direction: column;
+    text-align: justify;
+    gap: 0px;
+}
