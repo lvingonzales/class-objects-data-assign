@@ -6,3 +6,59 @@ body {
     font-family: Abeezee;
     color: #ffffff;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: scroll;
+    gap: 5rem;
+}
+
+.section {
+    display: flex;
+}
+
+.section.intro,
+.section.more {
+    flex-direction: column;
+    align-items: center;
+}
+
+.sub-heading{
+    font-size: 1.5rem;
+    margin-top: 0px;
+}
+
+.section.intro > .info{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: justify;
+}
+
+.heading {
+    margin-bottom: 0px;
+    font-size: 6rem;
+}
+
+.description {
+    padding-left: 1rem;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
+.chart {
+    flex: 1.5 1 0;
+    display: flex;
+    align-content: space-around;
+    justify-items: center;
+}
+
+.description>.heading {
+    margin-top: 0px;
+}
