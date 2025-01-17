@@ -116,5 +116,5 @@ function showInfo(event) {
 
 function showDefaultInfo(event) {
   whereSubHead.textContent = ``;
-  whereInfo.textContent = `This chart shows a total of country from which each object originates, hover over a category to see some observations of the data.`;
+  whereInfo.textContent = `This chart shows a total of countries from which each object originates, hover over a category to see some observations of the data.`;
 }
