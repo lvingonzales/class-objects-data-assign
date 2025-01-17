@@ -1,57 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./main.js" defer></script>
     <title>Data Visualization Assignment</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="section intro">
-            <p class="heading">Wheres and Hows</p>
-            <p class="sub-heading">by Liam Gonzales</p>
+      <div class="section intro">
+        <p class="heading">Wheres and Hows</p>
+        <p class="sub-heading">by Liam Gonzales</p>
+        <p class="info">
+          For my project I decided to examine and group the data by its country
+          of origin and its method of obtainment. I used the library d3.js for
+          the first time to crate two interactive donut charts to highlight and
+          display the different groups. Hovering over a pie section will
+          highlight that section and change the informational display next to it
+          to show my own personal observations of the data.
+        </p>
+      </div>
+      <div class="section where">
+        <div class="description">
+          <p class="heading">Where</p>
+          <p class="sub-heading"></p>
+          <p class="info">This chart shows a total of country from which each object originates, hover over a category to see some observations of the data.</p>
+        </div>
+        <div class="chart"></div>
+      </div>
+      <div class="section how">
+        <div class="chart"></div>
+        <div class="description">
+          <p class="heading">How</p>
+          <p class="sub-heading"></p>
+          <p class="info">This chart shows a total of the method by which each object was obtained, hover over a category to see some observations of the data.</p>
+        </div>
+      </div>
+      <div class="section more">
+        <p class="heading">More Info</p>
+        <div class="sub-section">
+          <div class="sub-section info">
+            <p class="sub-heading">Why</p>
             <p class="info">
-                SOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFO
-                SOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFO
-                SOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFO
-                SOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFO
+              I chose to use the country of origin as one of my attributes
+              because I have a fascination with other countries and cultures and
+              thought it would be interesting to look for trends that arise from
+              where our things come from.
             </p>
-        </div>
-        <div class="section where">
-            <div class="description">
-                <p class="heading">Where</p>
-                <p class="sub-heading">Items made in foo:</p>
-                <p class="info">
-                    The largest group was items manufactured in foo
-                </p>
-            </div>
-            <div class="chart">
-
-            </div>
-        </div>
-        <div class="section how">
-            <div class="chart">
-
-            </div>
-            <div class="description">
-                <p class="heading">Where</p>
-                <p class="sub-heading">Items made in foo:</p>
-                <p class="info">
-                    The largest group was items manufactured in foo
-                </p>
-            </div>
-        </div>
-        <div class="section more">
-            <p class="heading">More Info</p>
-            <p class="sub-heading">by Liam Gonzales</p>
             <p class="info">
-                SOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFO
-                SOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFO
-                SOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFO
-                SOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFOSOME INFO
+              As for the "how we got them" attribute, that branched off of a
+              thought I had in the last class where I assumed that a large
+              number of objects would be gifts due to the recent Christmas
+              season, an assumption that according to the data I was wrong
+              about.
             </p>
+          </div>
+          <div class="sub-section info">
+            <p class="sub-heading">How</p>
+            <p class="info">
+              On the topic of how I created my visualizations, I first extracted
+              some of the filtered data and placed it into a filter ".csv" file.
+              This would allow me an easier time extracting the information I
+              needed by changing some of the headings and adding descriptions to
+              each entry.
+            </p>
+            <p class="info">
+              I then used the d3.js library to create and draw the chart to the
+              screen, filling in the data from the two datasets and applying
+              some interactivity to each of the elements for some visual flair.
+              Lastly the information such as this paragraph you are reading was
+              added in using static HTML
+            </p>
+          </div>
         </div>
+      </div>
+      <footer>Liam Gonzales</footer>
     </div>
-</body>
+  </body>
 </html>
