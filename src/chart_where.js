@@ -8,8 +8,14 @@ const whereInfo = document.querySelector(".where > .description > .info");
 export default async function drawWhereChart() {
   const height = Math.min(width, 800);
   const radius = Math.min(width, height) / 2;
+  let data;
   
-  const data = await d3.csv("https://lvingonzales.github.io/A1_how_dataset.csv");
+  try {
+    data = await d3.csv("./A1_where_dataset.csv");
+  } catch (error) {
+    data = await d3.csv("https://lvingonzales.github.io/A1_how_dataset.csv");
+  }
+  
   console.log(data);
 
   const arc = d3
