@@ -22,7 +22,8 @@ body {
     display: flex;
 }
 
-.section.intro {
+.section.intro,
+.section.more {
     flex-direction: column;
     align-items: center;
 }
