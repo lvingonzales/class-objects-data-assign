@@ -9,6 +9,7 @@ export default async function drawWhereChart() {
   const height = Math.min(width, 800);
   const radius = Math.min(width, height) / 2;
 
+  //const data = await d3.csv("../A1_where_dataset.csv");
   const data = await d3.csv("https://lvingonzales.github.io/A1_where_dataset.csv");
   //console.log(data);
 

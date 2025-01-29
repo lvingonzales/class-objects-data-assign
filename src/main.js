@@ -4,6 +4,7 @@ import "./style.css";
 
 const whereChart = document.querySelector(".where > .chart");
 const howChart = document.querySelector(".how > .chart");
+const barChart = document.querySelector(".bar > .chart");
 
 drawWhereChart().then(svgNode => {
     whereChart.append(svgNode);

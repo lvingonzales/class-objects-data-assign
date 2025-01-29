@@ -85,12 +85,18 @@ footer {
     stroke-width: 5px;
     box-shadow: 50px 50px 50px #000000;
     transition: all 0.5s ease;
+    z-index: 200;
 }
 
 .inactive {
     fill: darkgray;
     transition: all 0.5s ease;
     box-shadow: none;
+    transform: scale(0.9);
+}
+
+svg {
+    padding: 1rem;
 }
 
 path {
