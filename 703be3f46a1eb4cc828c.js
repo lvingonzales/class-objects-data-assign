@@ -1,0 +1,1 @@
+import drawHowChart from"./chart_how";import drawWhereChart from"./chart_where";import"./style.css";const whereChart=document.querySelector(".where > .chart"),howChart=document.querySelector(".how > .chart"),barChart=document.querySelector(".bar > .chart");drawWhereChart().then((r=>{whereChart.append(r)})),drawHowChart().then((r=>{howChart.append(r)}));
